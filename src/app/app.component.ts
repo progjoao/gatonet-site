@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gatonet-site';
+  viewMode: string = 'register'
+
+  changeViewMode(mode: string) {
+    this.viewMode = mode
+  }
 }
